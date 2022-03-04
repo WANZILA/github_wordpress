@@ -1,0 +1,136 @@
+
+.navbar {
+  padding: .5rem 0.1rem;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  background-color:#813531;
+}
+
+.logo{
+  width:200px;
+}
+
+.nav-link {
+  display: block;
+  padding: 1.1rem 1rem;
+}
+
+.navbar-nav .nav-item a.nav-link:visited,.navbar-nav .nav-item a.nav-link {
+  color: rgb(255,255,255);
+  padding: 20px 15px 20px 10px;
+}
+
+.navbar-nav .nav-item a.nav-link:hover,.navbar-nav .nav-item a.nav-link:active {
+  color: rgba(156, 148, 148, 0.5);
+  text-decoration: underline;
+}
+
+
+
+
+
+.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
+  color: rgba(255,255,255,1);
+}
+.navbar-light .navbar-nav .nav-link {
+  color: rgb(0,0,0);
+}
+
+
+/**************navigation **************/
+.bg-light {
+  background-color:rgba(129, 53, 49,1)!important;
+  /* background-color: #8c1313; */
+}
+
+.dropdown-menu.show {
+  background-color:#813531;
+}
+.dropdown-item:focus, .dropdown-item:hover {
+  color: rgba(156, 148, 148, );
+  text-decoration: none;
+  background-color: #e1faee;
+}
+.dropdown-item{
+ color: rgba(255, 255, 255, 1);
+}
+
+.dropdown-item.active, .dropdown-item:active {
+  color: rgba(156, 148, 148, 1);
+  text-decoration: none;
+  background-color: #813531;
+}
+
+/*Drop down menu*/
+.dropdown-item:hover {
+  color: rgba(156, 148, 148, 0.5);
+  text-decoration: underline;
+  background-color: transparent;
+}
+
+/* displaying dropdown menu on hover */
+.dropdown:hover> .dropdown-menu{
+  display:block;
+  color: #000;
+  background-color: #813531;
+}
+
+@media(max-width:359.98px){
+  .navbar a {
+      max-width: 190px;
+  }
+  .navbar img{
+      /* position: absolute; */
+      top: 1px;
+      bottom:0;
+      margin: auto;
+      width: 50%;
+  }
+}
+
+@media (max-width:575.98px){
+  .navbar img{
+      /* position: absolute; */
+      top: 1px;
+      bottom:0;
+      margin: auto;
+      width: 50%;
+  }
+  
+}
+
+@media (min-width: 576px) and (max-width:767.98px){
+  .navbar img{
+      top: 1px;
+      bottom:0;
+      margin: auto;
+      width: 50%;
+  }
+} 
+
+@media (min-width: 768px) and (max-width: 971.98px){
+  .navbar img{
+      top: 1px;
+      bottom:0;
+      margin: auto;
+      width: 80%;
+  }
+  .navbar-nav .nav-item a.nav-link {
+    padding: 10px 2px 10px 0px
+  }
+
+}
+
+@media(min-width: 972px) and (max-width: 1199.98px)
+{
+  .navbar-nav .nav-item a.nav-link {
+    padding: 10px 5px 10px 0px
+  }
+}
+
+@media(min-width:1200px){
+  
+
+}
+
+

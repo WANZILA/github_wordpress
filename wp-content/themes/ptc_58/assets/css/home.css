@@ -1,0 +1,360 @@
+/* #carousel.carousel-inner.carousel-item img{
+  width:10%;
+  height: 100px;
+} */
+div.container-margins{
+  margin: 32px auto;
+}
+
+.news.col-lg-4 {
+  background-color: #813531;
+  color: white;
+}
+
+
+
+
+
+
+/***************************uPDATES AND NEWS ***************/
+
+
+
+/************************ cards ***********************/
+.card-deck .card {
+  overflow: auto;
+}
+
+.card-body {
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  padding: .5rem;
+}
+div.media .mr-3 {
+  margin-right: .1rem!important;
+}
+
+div.media-body a:link,
+div.media-body a:visited,
+div.media-body a:active {
+  /* color:  #bfbfbf; */
+  /* color: #813531; */
+  text-decoration: none;
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+}
+
+div.media-body a:hover {
+  color: rgb(129, 53, 49);
+  text-decoration: underline;
+  background-color: transparent;
+}
+
+div.card-deck hr {
+  margin-top: .1rem;
+}
+div.index_updates.col-lg-4, .testimonies {
+  width: 100%;
+  height: 10%;
+  background: rgb(129, 53, 49);
+  color: #bfbfbf;
+  padding: 5px 1px 5px 0px;
+  margin: 2px 0px 0px 2px;
+}
+
+div.apply_now .w-100 {
+  margin: 5px 0px 5px 2px;
+  width: 100%!important;
+  height: 100px;
+}
+div.index_campus_life{
+  width: 100%;
+  height: 2rem;
+  background: rgb(129, 53, 49);
+  color: #bfbfbf;
+  padding: 5px 1px 5px 0px;
+  margin: 2px 0px 0px 2px;
+}
+/*
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 0rem;
+  font-weight: 500;
+  line-height: 1.2;
+
+} */
+
+
+/******custome responsive image ****/
+#principle{
+  width: 100%;
+  height: 100%;
+  }
+
+.img-size-edits{
+  height: 17em;
+}
+/* .upcoming-img-size-edits{
+ 
+} */
+.img-contain{
+  object-fit: scale-down;
+}
+img.img-thumnails{
+  width:70px;
+  height:70px;
+}
+
+/*******apply links ******/
+span a.apply_links {
+  color: #bfbfbf;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+span a.apply_links:hover {
+color:#fff;
+  text-decoration: underline;
+}
+
+
+@media (max-width: 577.98px ){
+  /*****slide section **********************/
+
+
+  .slide-row h2{
+    font-size: 1em;
+    margin-bottom: 0rem;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 1;
+   }
+
+  /********updates /NEWS ********************/
+  .card-deck .card {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;   
+    height: 150px;
+    overflow: auto;     
+  }
+
+
+  .img-thumbnail {
+    padding: .25rem;
+    border: 1px solid #dee2e6;
+    border-radius: .25rem;
+    max-width: 15%;
+    height: auto;
+  }
+
+  div.media-body a:hover {
+    color:  #034b22; 
+    text-decoration: underline;
+    background-color: transparent;
+  }
+
+  div.media-body[_ngcontent-cyo-c1] a[_ngcontent-cyo-c1]:hover {
+    color: #fff;
+    text-decoration: none;
+    background-color: transparent;
+}
+img.img-fluid.card-img-top.mr-3 {
+  width: 15%;
+  margin: auto;
+}
+
+.img-size-edits{
+  height: 6em;
+}
+
+#frames{
+  width:inherit;
+  height:2em;
+}
+
+
+
+}
+
+
+/****************************** min-width: 576px *****************************************************/
+@media (min-width: 576px) and (max-width: 767.98px){
+
+  .slide-row h2{
+    font-size: 1em;
+    margin-bottom: 0rem;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 1;
+   }
+
+   .card-deck {
+    flex-flow: column;
+    margin-right: -15px;
+    margin-left: -15px;
+    }
+    
+   
+  .card-img-top {
+  width: 20%;
+  }
+  .img-thumbnail {
+  max-width: 15%;
+  height: auto;
+  }
+  
+  img.img-fluid.card-img-top.mr-3 {
+    width: 30%;
+    margin-left: 165px;
+  }
+
+  .img-size-edits{
+    height: 10em;
+  }
+  #iframes{
+    width:495px; 
+    height:250px;
+  }
+    
+
+}
+
+
+/*************************************************768px******************************/
+
+@media (min-width: 768px) and (max-width: 991.98px){
+
+  .card-deck {
+  flex-flow: column;
+  margin-right: -15px;
+  margin-left: -15px;
+  }
+
+  .img-thumbnail {
+  max-width: 10%;
+  height: auto;
+  }
+  img.img-fluid.card-img-top.mr-3 {
+    width: 25%;
+    margin-left: 245px;
+  }
+  #iframes{
+    width:640px; 
+    height:270px;
+  }
+  
+
+}
+
+@media (min-width: 992px)and (max-width: 1199.98px){
+
+  div.cols-lg-4-edit{
+    margin-left: 20px;   
+  }
+  .card-deck {
+    flex-flow: row wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+    }
+    .card-deck .card {
+      height: 300px;
+      overflow: auto;
+      }
+
+    .card-body {
+      -ms-flex: 1 1 auto;
+      flex: 1 1 auto;
+      padding: .5rem;
+      max-height:300px;
+    }
+
+
+  .img-thumbnail {
+  padding: .1rem;
+  max-width: 25%;
+  height: auto;
+  }
+  img.img-fluid.card-img-top.mr-3 {
+    margin-left: 65px;
+    width: 50%;
+  }
+  .img-size-edits{
+    height: 10em;
+  }
+  #iframes{
+    width:260px; 
+    height:270px;
+  }
+
+  a:not([href]):not([tabindex]):focus, a:not([href]):not([tabindex]):hover {
+    color: #fff;
+    text-decoration: underline;
+  }
+}
+
+@media (min-width:1200px){
+
+  div.cols-lg-4-edit{
+    margin-right: 15px;   
+  }
+  div.cols{
+    background: #813531;
+    color:#bfbfbf;
+    margin-top: 10px;
+    margin-left: 15px;
+    margin-bottom:0px;
+    margin-right: 0px;  
+    flex: 0 0  30.555555%;
+    max-width: 30.555555%;  
+    font-size: 1.5rem; 
+  }
+
+  .card-deck {
+    flex-flow: row wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+    }
+    .card-deck .card {
+      height: 300px;
+      overflow: hidden;
+      }
+
+    .card-body {
+      -ms-flex: 1 1 auto;
+      flex: 1 1 auto;
+      padding: .5rem;
+      max-height:300px;
+      overflow-x: hidden;
+      overflow-y: inherit;
+    }
+      
+  .img-thumbnail {
+  padding: .1rem;
+  max-width: 25%;
+  height: auto;
+  }
+  img.img-fluid.card-img-top.mr-3 {
+    margin-left: 75px;
+    width: 53%;
+  }
+  img#img_principle {
+    width: 55%;
+    margin: auto;
+  }
+  .img-size-edits{
+    height: 10.3em;
+  }
+  #iframes{
+  width:320px; 
+  height:250px;
+  }
+  a:not([href]):not([tabindex]):focus, a:not([href]):not([tabindex]):hover {
+    color: #fff;
+    text-decoration: underline;
+    /* background-color: #8135316e ; */
+  }
+}
+
