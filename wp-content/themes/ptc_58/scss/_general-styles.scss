@@ -1,0 +1,5 @@
+@use'custom' as *;
+body{
+  background-image: linear-gradient(to right,$primary, $primary-light);
+  
+}

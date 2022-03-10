@@ -1,0 +1,30 @@
+@use'custom' as *;
+@use'mixins' as *;
+
+
+
+
+.navbar-nav {
+  .nav-link {
+    font-size: 1.1rem;
+    &:hover,
+    &:focus {
+      color: $navbar-light-hover-color;
+      background-color: $white;
+      @include border-radius-sm;
+    }
+
+    // &.disabled {
+    //   color: $navbar-light-disabled-color;
+    // }
+  }
+}
+.dropdown-item {
+
+  &:hover{
+    background-color: $white;
+  }
+  
+
+}
+

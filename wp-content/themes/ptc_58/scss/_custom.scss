@@ -1,0 +1,28 @@
+// Variables
+// scss-docs-start theme-color-variables
+$primary:       rgb(128, 0, 0);
+$primary-light:  rgb(255, 11, 11);
+$black:  rgb(0, 0, 0);
+$white: rgb(255,255,255);
+// $secondary:     red;
+
+
+//body element
+$body-color:  rgb(255,270,40);  
+
+// nav links navigation 
+$navbar-light-color: $white;
+
+//hover 
+$navbar-light-hover-color: $black;
+
+//dropdown menu
+//$dropdown-color: $black;
+$dropdown-bg: $primary;
+$dropdown-link-color: $white;
+$dropdown-link-active-color: $black;
+$dropdown-dark-link-hover-color: $black;
+$dropdown-link-hover-color: $black;
+$dropdown-divider-bg: $primary-light;
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
