@@ -17,26 +17,15 @@
     <!-- </header>   -->
  
       
-<div class="container-fluid">
-  <header >
-  <nav class="navbar navbar-expand-md navbar-light bg-light" role="navigation">
+    <nav class="navbar navbar-expand-md navbar-light bg-primary shadow">
   <div class="container">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-controls="bs-example-navbar-collapse-1" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'your-theme-slug' ); ?>">
-        <span class="navbar-toggler-icon"></span>
+    
+      <?php show_easylogo(); ?>    
+  
+    <button class="navbar-toggler ml-2" type="button" data-bs-toggle="collapse" data-bs-target="#bs-example-navbar-collapse-1" aria-controls="bs-example-navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
     </button>
-    <a class="navbar-brand" href="#">
-      <?php 
-        if(function_exists('the_custom_logo')){
-          //styling the logo by dev 
-          $custom_logo_id = get_theme_mod('custom_logo');
-          $logo = wp_get_attachment_image_src($custom_logo_id);
-        }
-      ?>
-      <!-- <img src="<?php echo $logo[0]?>" alt="logo"> -->
-      <?php show_easylogo(); ?>
-     
-    </a>
+    
         <?php
           wp_nav_menu( array(
             'theme_location'    => 'main_menu',
@@ -49,23 +38,8 @@
             'walker'            => new WP_Bootstrap_Navwalker(),
           ) );
         ?>
-    </div>
+
+  </div>
 </nav>
 
-            
-
-      <!-- <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle"  id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
-      </li> -->
-
-            
-  </header>
-</div>
+   

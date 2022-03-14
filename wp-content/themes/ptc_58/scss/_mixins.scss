@@ -1,5 +1,16 @@
+@use'custom' as *;
 
 @mixin border-radius-sm{
   border-radius: 4px;
+}
 
+@mixin gradient-inverse{
+  background-image: linear-gradient(to left, $primary, $primary-light);
+}
+.grad-inverse{
+  background-image: linear-gradient(to left, $primary, $primary-light);
+}
+
+.word-wraps{
+  overflow-wrap: anywhere;
 }

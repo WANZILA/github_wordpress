@@ -3,124 +3,57 @@
    <?php
 echo do_shortcode('[smartslider3 slider="2"]');
 ?> 
-  <!-- <section class="row">
-    <div class="col-12">
-        <div class="fixed-attachment">
-            <h1 class="heading1"> Pentecostal Theological College is a  instituition accredited by National council for Higher Education. It has inclusive and engaged
-                research-intensive College that inspires creativity through outstanding achievements in Ministry, learning, Agricultural
-                projects  and discovery.
-            </h1>
-        </div>
+ <main >
+   <!-- start of intro section -->
+    <div class="container">
+        <section class="row mt-3 shadow">
+          <div class="col-sm-12 col-md-7 col-lg-7 mb-3">
+            <?php 
+                //displays all the college admin descriptions in ascending order 
+                // https://denverdata.com/blog/how-use-wpquery-display-custom-post-type
+
+                  $args = array(
+                    'post_type' => 'AdminsDescription',
+                    'posts_per_page'=> 1,
+                    'order' => 'ASC'
+                  );
+                  
+                  $adminDescrip = new WP_Query($args);
+                
+                while( $adminDescrip->have_posts()){
+                  $adminDescrip->the_post();
+                ?>
+            <div class="row">
+              <div class="col-sm-12 col-md-5 col-lg-5">
+              <img class="img-fluid img-fit mx-auto d-block" src="<?php echo get_the_post_thumbnail_url(get_the_ID());?>">
+
+              </div>
+              <div class="col-sm-12 col-md-7 col-lg-7 pt-2">
+                <p class="word-wraps"><?php echo wp_trim_words(get_the_excerpt(),60); ?></p>
+                <a class="btn btn-outline-light" href="<?php the_permalink();?>">Read More</a>
+              </div>
+            </div>
+            <?php
+              }  wp_reset_query(); ?>
+          </div>
+          <div class="col-sm-12 col-md-5 col-lg-5  mt-2 grad-inverse">
+              <iframe id="iframes" src="https://www.youtube.com/embed/fcc2pu84zGA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+        </section>
     </div>
-  </section> -->
+    <!--end of intro section  -->
+  <div class="container">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 200 1440 320"><path fill="#FF9494" fill-opacity="1" d="M0,224L120,240C240,256,480,288,720,282.7C960,277,1200,235,1320,213.3L1440,192L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path></svg>
+  </div>
+    
+
+ </main>
+ 
+
+
+
 
 <div class="container">
-                            
-      <section class="row row-padding">
-        <div class="col-12 ">
-            <h2 ><b>Notice Board</b>  </h2> 
-        </div>
-        <div class="col-12 ">         
-            <div class="card-deck">               
-                    <div class="card">  
-                      <!-- <h5 class="text-center"> </h5>                   -->
-                      <?php 
-                      //displays all the college admin descriptions in ascending order 
-                      // https://denverdata.com/blog/how-use-wpquery-display-custom-post-type
-
-                        $args = array(
-                          'post_type' => 'AdminsDescription',
-                          'posts_per_page'=> 1,
-                          'order' => 'ASC'
-                        );
-                        
-                        $adminDescrip = new WP_Query($args);
-                      
-                      while( $adminDescrip->have_posts()){
-                        $adminDescrip->the_post();
-                      ?>
-                      
-                      
-                          <h3 class="text-center heading1"><b>Welcome Message</b> </h3>
-                     
-            
-                    <div class="img-size-edits">
-                      <!-- img-fluid card-img-top -->
-                        <img class="img-contain" id="principle"  src="<?php echo get_the_post_thumbnail_url(get_the_ID());?>">
-                      </div>
-                    
-                      <span class="excerpt_class">
-                      <?php 
-                      
-                       echo wp_trim_words(get_the_excerpt(),1); ?>
-
-                      </span>
-                      <div class="readmore">
-                      <a class="btn btn-primary" href="<?php the_permalink();?>">Read More</a>
-                      </div>
-                      <?php 
-                        }
-                        wp_reset_query();
-                      ?>
-                    
-                      
-                    </div>
-
-                    <div class="card">   
-                      <h5 class="text-center"><b>College Updates</b></h5>                  
-                      <div class="card-body"> 
-                      <?php 
-                        $args = array(
-                        'post_type' =>'UpcomingEvents',
-                        'posts_per_page' => '3'
-                        );
-                        
-                        $upcoming = new WP_Query($args);
-                        while($upcoming -> have_posts()){
-                          $upcoming->the_post();
-                      ?>                                               
-                        
-                          <div class="media">                        
-                              <img class=" mr-3 img-fluid post-thumb  d-md-flex img-thumnails" src="<?php the_post_thumbnail_url('thumbnail');?>">
-                          
-                              <div class="media-body">
-                              <a href="<?php the_permalink();?>"><?php the_title();?> </a>
-                                <?php 
-                                    echo wp_trim_words(get_the_excerpt(),10);
-                                ?>
-                              </div>
-                          </div>
-                          <hr>
-                      
-                      <?php 
-                        }
-                        wp_reset_query();
-                      ?>
-                      </div> 
-                      
-                    </div>
-
-
-                    <div class="card">  
-                      <h5 class="text-center"><b>College Tour</b> </h5>                   
-                        <div class="card-body">                                                
-                          <div class="media">
-                            <!-- <img class=" card-img-top mr-3 img-thumbnail" src="../../assets/img/index/4.svg" alt="card img"> -->
-                              <div class="media-body">
-                                <iframe id="iframes" src="https://www.youtube.com/embed/fcc2pu84zGA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                  
-                              </div>
-                            </div>
-                
-                        </div>
-                        
-                    </div>
-                  
-          </div>
-        </div>
-
-      </section>
-
       <!-- call to action -->
       <section class="row row-padding">
           <div class="col-sm-12  col-md-12 ">

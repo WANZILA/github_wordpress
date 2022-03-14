@@ -5,6 +5,8 @@
 
 
 .navbar-nav {
+ 
+
   .nav-link {
     font-size: 1.1rem;
     &:hover,
@@ -19,12 +21,51 @@
     // }
   }
 }
+
+
+
+  .navbar-brand{
+
+    span{
+
+      .none{
+
+        img{
+          width:15rem;
+          height:15rem;
+        }
+      }
+
+      
+    }
+  }
+
+  .easylogo {
+
+    
+   @include media-breakpoint-down(md){
+    width: 80%;
+     //display:inline;
+    img{
+      width: 100%;
+    }
+   }
+   
+    
+}
+
 .dropdown-item {
 
   &:hover{
     background-color: $white;
   }
-  
 
+}
+
+/* displaying dropdown menu on hover */
+.dropdown:hover> .dropdown-menu{
+  display:block;
+  // color: #000;
+  // background-color: #813531;
 }
 

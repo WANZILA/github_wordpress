@@ -1,5 +1,19 @@
 @use'custom' as *;
+@use'mixins' as *;
+
+
 body{
   background-image: linear-gradient(to right,$primary, $primary-light);
+  font-size: 16px;
+}
+
+.img-fit{
+  // object-fit: fill;
+  
+
+  
+  @include media-breakpoint-up(md){
+    width: 100%;
+  }
   
 }

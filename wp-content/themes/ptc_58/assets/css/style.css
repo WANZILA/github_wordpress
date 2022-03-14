@@ -11118,8 +11118,23 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+.grad-inverse {
+  background-image: linear-gradient(to left, maroon, #ff0b0b);
+}
+
+.word-wraps {
+  overflow-wrap: anywhere;
+}
+
 body {
   background-image: linear-gradient(to right, maroon, #ff0b0b);
+  font-size: 16px;
+}
+
+@media (min-width: 768px) {
+  .img-fit {
+    width: 100%;
+  }
 }
 
 .navbar-nav .nav-link {
@@ -11131,8 +11146,27 @@ body {
   border-radius: 4px;
 }
 
+.navbar-brand span .none img {
+  width: 15rem;
+  height: 15rem;
+}
+
+@media (max-width: 767.98px) {
+  .easylogo {
+    width: 80%;
+  }
+  .easylogo img {
+    width: 100%;
+  }
+}
+
 .dropdown-item:hover {
   background-color: white;
+}
+
+/* displaying dropdown menu on hover */
+.dropdown:hover > .dropdown-menu {
+  display: block;
 }
 
 /*# sourceMappingURL=style.css.map */

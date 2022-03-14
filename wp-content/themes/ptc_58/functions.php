@@ -26,14 +26,16 @@ add_action( 'after_setup_theme', 'phi_theme_support' );
     //gets Version number from style.css 
     $version = wp_get_theme()->get('Version');
     // wp_enqueue_script('ptc-jquery',"https://code.jquery.com/jquery-3.5.1.slim.min.js",array(),'3.5.1',true);
-    // wp_enqueue_script('ptc-pooper',"https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js",array('ptc-jquery'),'1.16.1',true);  
-    wp_enqueue_script('ptc-boot',"https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css",array(),'5.1.3'); 
-    wp_enqueue_style('ptc_bootstrap','https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js','5.1.3',true);
-    wp_enqueue_style('style', get_template_directory_uri().'/assets/css/style.css',array('ptc_boot'),$version,'all');
+    wp_enqueue_script('ptc-boot',"https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css",array(),'5.1.3');
+    wp_enqueue_script('ptc-pooper',"https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js",array(),'2.10.2',true);  
+    wp_enqueue_script('ptc-js',"https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js",array(),'5.1.3',true); 
+     
+    wp_enqueue_style('style', get_template_directory_uri().'/assets/css/style.css',array(),$version,'all');
      //wp_enqueue_style('ptc_fontawesome',"",'','all');  
     // wp_enqueue_style('ptc_header_style',get_template_directory_uri()."/assets/css/header.css",array('ptc_bootstrap','style'),$version,'all');
     // wp_enqueue_style('ptc_home_style',get_template_directory_uri()."/assets/css/home.css",array('ptc_bootstrap','style'), $version,'all');
     // wp_enqueue_style('ptc_footer_style',get_template_directory_uri()."/assets/css/footer.css",array('ptc_bootstrap','style','ptc_header_style'),$version,'all');
+    //wp_enqueue_script('ptc-bundle',get_template_directory_uri()."/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",array('style'),$version,true);
 
     wp_enqueue_script('ptc-main-js',get_template_directory_uri()."/assets/js/main.js",array('ptc_bootstrap'),$version,true);
 }
