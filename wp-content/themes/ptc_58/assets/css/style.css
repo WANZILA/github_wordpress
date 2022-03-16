@@ -11142,6 +11142,11 @@ body {
   }
 }
 
+.img-edit {
+  width: 3.8rem;
+  image-rendering: auto;
+}
+
 h2 {
   text-align: center;
 }
@@ -11157,6 +11162,16 @@ h2 {
 }
 .border-light:hover a {
   color: maroon;
+}
+
+#hr {
+  height: 0.1rem;
+  margin-top: 0.3rem;
+  color: white;
+}
+
+.right-border {
+  border-right: 0.3rem solid rgba(255, 255, 255, 0.2);
 }
 
 .navbar-nav .nav-link {

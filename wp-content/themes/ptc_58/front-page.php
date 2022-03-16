@@ -113,6 +113,80 @@ echo do_shortcode('[smartslider3 slider="2"]');
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="10 150 1400 100"><path fill="#AE0000" fill-opacity="1" d="M0,192L120,170.7C240,149,480,107,720,117.3C960,128,1200,192,1320,224L1440,256L1440,0L1320,0C1200,0,960,0,720,0C480,0,240,0,120,0L0,0Z"></path></svg>
           </div>               
       </div>
+
+      <section class="container">
+        <div class="row">
+          <div class="col-12"> <h2 class="h2">College News and Events</h2></div>
+        </div>
+        <div class="row grad-inverse shadow">
+          <div class="col-12 col-md-6 right-border">
+            <div class="row g-0">
+              <h3 class="h3"> College News </h3>
+              <?php 
+                $args = array(
+                'post_type' =>'UpcomingEvents',
+                'posts_per_page' => '4'
+                );
+                
+                $upcoming = new WP_Query($args);
+                while($upcoming -> have_posts()){
+                  $upcoming->the_post();
+              ?>   
+                <div class="col-sm-2 pt-0 ">
+                  <img class="img-fluid img-thumnail mx-auto d-block img-edit" src="<?php the_post_thumbnail_url('thumbnail');?>">
+                </div>
+                <div class="col-sm-10 border-light word-wraps">
+                  <a class="btn" href="<?php the_permalink();?>"><?php the_title();?> 
+                    <?php 
+                        echo wp_trim_words(get_the_excerpt(),10);
+                    ?>
+                  </a>
+                </div>
+                <hr id="hr">
+              <?php 
+                }
+                wp_reset_query();
+              ?>
+            </div>
+
+          </div>
+
+          <!-- College upcoming events -->
+          <div class="col-12 col-md-6">
+            <div class="row g-0">
+              <h3 class="h3">Upcoming Events </h3>
+              <?php 
+                $args = array(
+                'post_type' =>'UpcomingEvents',
+                'posts_per_page' => '4'
+                );
+                
+                $upcoming = new WP_Query($args);
+                while($upcoming -> have_posts()){
+                  $upcoming->the_post();
+              ?>   
+                <div class="col-sm-2 pt-0 ">
+                  <img class="img-fluid img-thumnail mx-auto d-block img-edit" src="<?php the_post_thumbnail_url('thumbnail');?>">
+                </div>
+                <div class="col-sm-10 border-light word-wraps">
+                  <a class="btn" href="<?php the_permalink();?>"><?php the_title();?> 
+                    <?php 
+                        echo wp_trim_words(get_the_excerpt(),10);
+                    ?>
+                  </a>
+                </div>
+                <hr id="hr">
+              <?php 
+                }
+                wp_reset_query();
+              ?>
+            </div>
+
+          </div>
+          
+        </div>
+      </section>
+
                
 
     

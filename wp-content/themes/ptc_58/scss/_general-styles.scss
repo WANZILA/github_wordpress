@@ -24,6 +24,11 @@ body{
   
 }
 
+.img-edit{
+  width: 3.8rem;
+  image-rendering: auto;
+}
+
 h2{
   text-align: center;
 }
@@ -46,9 +51,21 @@ h2{
       }
   }
 }
+
+#hr{
+  
+  height: 0.1rem;
+  margin-top: 0.3rem;
+  color: $white;
+}
 // .border-light .btn:hover {
 //   color: black;
 // }
+
+// borders
+.right-border{
+  border-right: .3rem solid $white-light;
+}
 
 
 
