@@ -15,31 +15,29 @@
   
      
     <!-- </header>   -->
- 
-      
     <nav class="navbar navbar-expand-md navbar-light bg-primary shadow">
-  <div class="container">
-    
-      <?php show_easylogo(); ?>    
-  
-    <button class="navbar-toggler ml-2" type="button" data-bs-toggle="collapse" data-bs-target="#bs-example-navbar-collapse-1" aria-controls="bs-example-navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    
-        <?php
-          wp_nav_menu( array(
-            'theme_location'    => 'main_menu',
-            'depth'             => 2,
-            'container'         => 'div',
-            'container_class'   => 'collapse navbar-collapse',
-            'container_id'      => 'bs-example-navbar-collapse-1',
-            'menu_class'        => 'navbar-nav mr-auto',
-            'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
-            'walker'            => new WP_Bootstrap_Navwalker(),
-          ) );
-        ?>
+        <div class="container">
+          
+            <?php show_easylogo(); ?>    
+        
+          <button class="navbar-toggler ml-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          
+              <?php
+                wp_nav_menu( array(
+                  'theme_location'    => 'main_menu',
+                  'depth'             => 2,
+                  'container'         => 'div',
+                  'container_class'   => 'collapse navbar-collapse',
+                  'container_id'      => 'navbarSupportedContent',
+                  'menu_class'        => 'navbar-nav mr-auto',
+                  'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
+                  'walker'            => new WP_Bootstrap_Navwalker(),
+                ) );
+              ?>
 
-  </div>
-</nav>
+        </div>
+  </nav>
 
    
