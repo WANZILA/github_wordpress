@@ -25,7 +25,7 @@ echo do_shortcode('[smartslider3 slider="2"]');
                 ?>
             <div class="row">
               <div class="col-sm-12 col-md-5 col-lg-5">
-              <img class="img-fluid img-fit mx-auto d-block" src="<?php echo get_the_post_thumbnail_url(get_the_ID());?>">
+              <img class="img-fluid img-fit mx-auto d-block shadow rounded" src="<?php echo get_the_post_thumbnail_url(get_the_ID());?>">
 
               </div>
               <div class="col-sm-12 col-md-7 col-lg-7 pt-2">
@@ -58,7 +58,7 @@ echo do_shortcode('[smartslider3 slider="2"]');
         
         
     </div> -->
-  <div class="container-fluid mt-4 g-0" >
+  <div class="container-fluid mt-4 g-0 mb-4" >
       <div class="row g-0">
           <div class="col-12 ">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 250 1440 40"><path fill="#AE0000" fill-opacity="1" d="M0,224L120,240C240,256,480,288,720,282.7C960,277,1200,235,1320,213.3L1440,192L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path></svg>
@@ -84,14 +84,14 @@ echo do_shortcode('[smartslider3 slider="2"]');
 
              <!-- links to call to action -->
             <div class="row mt-2 align-items-center gx-3 back-color">
-              <div class="col-sm-12 col-md-4 col-lg-3 border border-light item-border py-2 my-2  text-center">                                
+              <div class="col-sm-12 col-md-4 col-lg-3 border border-light item-border py-2 my-2  text-center rounded">                                
                 <a class="btn" href="<?php echo site_url('index.php/programmes');?>">Courses Offered</a>
               </div>
               
-              <div class="col-sm-12 col-md-4 col-lg-4 border border-light py-2 my-2 mx-auto  text-center"> 
+              <div class="col-sm-12 col-md-4 col-lg-4 border border-light py-2 my-2 mx-auto  text-center rounded"> 
                 <a class="btn" href="<?php echo site_url('index.php/college-life');?>">Life at the college</a>
               </div>
-              <div class="col-sm-12 col-md-4 col-lg-4 border border-light py-2 my-2 mx-2  text-center" > 
+              <div class="col-sm-12 col-md-4 col-lg-4 border border-light py-2 my-2 mx-2  text-center rounded" > 
                 <a class="btn " href="<?php echo site_url('index.php/application-procedure');?>">How to Apply</a>
               </div>
             </div>
@@ -119,6 +119,7 @@ echo do_shortcode('[smartslider3 slider="2"]');
           <div class="col-12"> <h2 class="h2">College News and Events</h2></div>
         </div>
         <div class="row grad-inverse shadow">
+          <!-- college news -->
           <div class="col-12 col-md-6 right-border">
             <div class="row g-0">
               <h3 class="h3"> College News </h3>
@@ -135,8 +136,8 @@ echo do_shortcode('[smartslider3 slider="2"]');
                 <div class="col-sm-2 pt-0 ">
                   <img class="img-fluid img-thumnail mx-auto d-block img-edit" src="<?php the_post_thumbnail_url('thumbnail');?>">
                 </div>
-                <div class="col-sm-10 border-light word-wraps">
-                  <a class="btn" href="<?php the_permalink();?>"><?php the_title();?> 
+                <div class="col-sm-10 border-light word-wraps ">
+                  <a class="btn text-start" href="<?php the_permalink();?>"><?php the_title();?> 
                     <?php 
                         echo wp_trim_words(get_the_excerpt(),10);
                     ?>
@@ -169,7 +170,7 @@ echo do_shortcode('[smartslider3 slider="2"]');
                   <img class="img-fluid img-thumnail mx-auto d-block img-edit" src="<?php the_post_thumbnail_url('thumbnail');?>">
                 </div>
                 <div class="col-sm-10 border-light word-wraps">
-                  <a class="btn" href="<?php the_permalink();?>"><?php the_title();?> 
+                  <a class="btn text-start" href="<?php the_permalink();?>"><?php the_title();?> 
                     <?php 
                         echo wp_trim_words(get_the_excerpt(),10);
                     ?>
@@ -195,19 +196,6 @@ echo do_shortcode('[smartslider3 slider="2"]');
  
 
 
-<div class="container-fluid container-margins container-backgrounds">
-      <section class="row row-padding ">
-        <div class="col-12">
-            
-            
-        </div>
-        <div class="col-12">
-         
-        </div>
-      
-      </section>
-
-</div>
    
 <?php get_footer();?>
   

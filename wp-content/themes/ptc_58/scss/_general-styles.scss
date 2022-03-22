@@ -67,6 +67,45 @@ h2{
   border-right: .3rem solid $white-light;
 }
 
+.body-color{
+  color: $body-color;
+}
+
+//side bars
+
+.side-navs{
+  padding-left: 1rem;
+  color: $white;
+
+  ul{
+
+    li{
+      margin: .5rem 0rem;
+      padding: .2rem 0rem;
+      
+
+      &:hover{
+        background-color: $white;
+        color: $primary;
+      }
+
+      a{
+        color: $white;
+        text-decoration: none;
+        font-weight: 600;
+
+        &:hover{
+          color: $primary;
+        }
+
+      }
+
+
+  
+    }
+  }
+}
+
 
 
 

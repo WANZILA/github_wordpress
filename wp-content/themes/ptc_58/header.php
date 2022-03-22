@@ -15,7 +15,7 @@
   
      
     <!-- </header>   -->
-    <nav class="navbar navbar-expand-md navbar-light bg-primary shadow">
+    <nav class="navbar navbar-expand-md navbar-light bg-primary shadow" id="top">
         <div class="container">
           
             <?php show_easylogo(); ?>    
